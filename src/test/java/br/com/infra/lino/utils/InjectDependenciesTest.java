@@ -4,7 +4,6 @@ import static org.junit.Assert.assertTrue;
 
 import java.util.List;
 
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,13 +30,8 @@ public class InjectDependenciesTest {
 	@Test
 	public void shouldInjectRepositoryWhenIsCollection() {
 		List<User> users = userRepository.list();
-		
-		assertTrue("Repository não foi injetado quando retornou uma lista de users", 
+
+		assertTrue("Repository não foi injetado quando retornou uma lista de users",
 				users.get(0).isNotNullDependencies());
 	}
-
-	@Before
-	public void setUp() {
-	}
-
 }
