@@ -20,8 +20,8 @@ public class User {
 	}
 
 	public boolean isNotNullDependencies() {
-		if (userRepository != null)
-			throw new IllegalStateException("Não consegui injetar repository");
+		if (userRepository == null)
+			throw new IllegalStateException("Não injetou o repository");
 
 		return true;
 	}
