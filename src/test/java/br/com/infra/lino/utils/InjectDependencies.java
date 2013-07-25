@@ -1,4 +1,4 @@
-package br.com.infra.utils;
+package br.com.infra.lino.utils;
 
 import org.junit.Before;
 import org.junit.Test;
