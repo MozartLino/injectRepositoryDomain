@@ -18,10 +18,10 @@ public class InjectDependencies {
 	@AfterReturning(value = "@annotation(br.com.lino.infra.annotation.AddDependencies)", returning = "target")
 	public void resolve(Object target) throws Throwable {
 		if (target != null)
-			addDependeciesIn(target);
+			autowire(target);
 	}
 
-	private void addDependeciesIn(Object target) {
+	private void autowire(Object target) {
 		if (target instanceof Collection<?>) {
 			autowireBeans((Collection<?>) target);
 		} else {
